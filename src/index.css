@@ -1,0 +1,223 @@
+
+.Login{
+  border: 1px solid #ccc;
+  padding: 20px;
+  width: 500px;
+  margin: 20px auto;
+}
+
+label{
+  display: block;
+  margin-bottom: 10px;
+}
+
+.login-details input{
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+
+.display-msg {
+  margin-top: 30px;
+}
+
+.login-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.login button:hover{
+  background-color: #3e8e41;
+}
+
+
+.sign-up{
+  border: 0px;
+  
+  font-size: 20px;
+  margin-left: 70%;
+  margin-bottom: 20px;
+  text-decoration: none;
+}
+
+.sign-up:hover{
+  text-decoration: underline;
+}
+
+.input-label{
+  display: flex;
+  font-size:large;
+  text-align: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.input-label label{
+  width: 120px;
+}
+
+.input-label input{
+  width: 90%;
+  padding: 10px;
+}
+
+.Login form{
+  text-align: center;
+}
+
+.Login h2{
+  text-align: center;
+  margin: 10px 0 20px 0;
+}
+
+
+body{
+  font-family: sans-serif;
+  margin: 0px;
+}
+
+header {
+  align-items: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.footer-bg{
+  background-color: rgb(8, 136, 115);
+  justify-content: center;
+  font-weight: bolder;
+  text-align: center;
+}
+
+
+
+.footer-bg-last{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.footer-bg-last p{
+  margin-top: 0px;
+  margin-bottom: 30px;
+}
+
+footer{
+  margin-top: 10px;
+  display: flex;
+  padding: 0 7%;
+  justify-content: space-between;
+  
+}
+
+footer h2{
+  margin-top: 8px;
+}
+
+footer ul{
+  padding: 0px;
+}
+
+footer li{
+  margin-bottom: 5px;
+  list-style: none;
+  text-align: left;
+}
+
+footer img{
+  width: 40px;
+  height: 40px;
+  margin : 10px;
+}
+
+.footer-img{
+  display: flex;
+}
+
+.nav_div p{
+  font-weight: bolder;
+  font-size: larger;
+  margin-right: 10px;
+}
+
+.nav_div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav_but{
+  margin-left: 10px;
+}
+.nav_but button{
+  margin-right: 20px;
+}
+
+input[type="search"] {
+  width: 60%;
+  padding: 10px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer; 
+}
+
+.main-body{
+  text-align: center;
+}
+
+.main-body h2{
+  font-size: xx-large;
+  
+}
+
+.form-signup{
+  margin-top: 20px;
+  background-color: rgb(196, 194, 194);
+  font-weight: 400;
+  width: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.form-signup label{
+  margin-left: 10px;
+  margin-right: 20px;
+  font-size: x-large;
+  font-weight: bolder;
+
+}
+
+.form-signup input{
+  height: 20px;
+  vertical-align: middle;
+  width: 40%;
+  margin-right: 10px;
+
+}
+
+.form-signup button{
+    border: 0;
+    padding: 10px;
+    width: auto;
+    font-weight: 700;
+    background-color: rgb(160, 158, 158);
+    vertical-align: middle;
+
+}
+.welcome-message {
+  text-align: center; 
+  margin: 20px 0;
+  font-size: 24px; 
+  color: #333; 
+  font-weight: bold; 
+}
