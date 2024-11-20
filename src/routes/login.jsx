@@ -1,7 +1,9 @@
 import { collection, getDocs } from "firebase/firestore";
 import { useState } from "react";
-import { db } from "../firebase";
+import { db, auth } from "../firebase"; // Ensure 'auth' is exported from your firebase config
 import { Link } from "react-router-dom";
+import { GoogleAuthProvider, signInWithPopup } from "firebase/auth"; // Import Firebase auth methods
+
 function Login({ setIsLoggedIn, setWelcomeMessage }) {
     const [user, setUser] = useState({
         email: "",
@@ -43,13 +45,28 @@ function Login({ setIsLoggedIn, setWelcomeMessage }) {
         );
 
         if (userMatch) {
-            setWelcomeMessage(`Welcome, ${userMatch.data.user["firstName"]}`); // Set welcome message
+            setWelcomeMessage(`Welcome, ${userMatch.data.user["firstName"]}`);
             setError("");
-            setIsLoggedIn(true); // Update login state on successful login
+            setIsLoggedIn(true);
         } else {
             setError("Credentials do not match");
         }
     }
+
+    const handleGoogleSignIn = async () => {
+        const provider = new GoogleAuthProvider();
+
+        try {
+            const result = await signInWithPopup(auth, provider);
+            const user = result.user; // Firebase user object
+            setWelcomeMessage(`Welcome, ${user.displayName}`); // Display name from Google
+            setError("");
+            setIsLoggedIn(true);
+        } catch (error) {
+            console.error("Google Sign-In Error:", error);
+            setError("Google Sign-In failed. Please try again.");
+        }
+    };
 
     return (
         <div className="Login">
@@ -83,6 +100,13 @@ function Login({ setIsLoggedIn, setWelcomeMessage }) {
                     <br />
                     <button className="login-button" type="submit">
                         Login
+                    </button>
+                    <button
+                        className="login-with-google"
+                        type="button" // Change to "button" to prevent form submission
+                        onClick={handleGoogleSignIn}
+                    >
+                        Login with Google
                     </button>
                 </form>
             </div>
